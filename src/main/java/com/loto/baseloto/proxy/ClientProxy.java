@@ -1,6 +1,7 @@
 package com.loto.baseloto.proxy;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
 import com.loto.baseloto.DrewMod;
@@ -44,6 +45,5 @@ public class ClientProxy extends CommonProxy
 
     public void rpcupdate(DrewMod main, String details, String largeImgKey, String largeImgText, String smallImgKey, String smallImgText) {
         main.rpcClient.updatePresence(details, largeImgKey, largeImgText, smallImgKey, smallImgText);
-}
-	
+    }
 }

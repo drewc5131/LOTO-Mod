@@ -1,14 +1,14 @@
 [
 {
-  "modid": "lotomod",
+  "modid": "baseloto",
   "name": "LOTO Mod",
   "description": "Content for Legend of the Overlord / related series",
-  "version": "${version}",
+  "version": "1.5.0",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
   "authorList": ["Drew"],
-  "credits": "Developed by Drew\nMythical Pickaxe texture by Ethan",
+  "credits": "Developed by Drew, Mythical Pickaxe texture by Ethan",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

@@ -1,7 +1,9 @@
 package com.loto.baseloto.proxy;
 
 import net.minecraft.item.Item;
+import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 import com.loto.baseloto.DrewMod;
@@ -42,6 +44,5 @@ public class CommonProxy
 		// TODO Auto-generated method stub
 		
 	}
-	
 	
 }
