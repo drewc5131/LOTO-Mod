@@ -1,0 +1,6 @@
+{
+    "parent":"baseloto:item/defaultitem",
+    "textures": {
+        "layer0":"baseloto:items/chipmunkcard"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent":"DrewMod:item/defaultitem",
+    "textures": {
+        "layer0":"drewmod:items/chipmunkcard"
+    }
+}

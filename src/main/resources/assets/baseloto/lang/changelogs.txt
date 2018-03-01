@@ -1,0 +1,59 @@
+Meme Mod Change Logs:
+
+Alpha 1.4.2:
+-Fixed server crashing
+-Fixed Kappa Fish name
+-Added Classic Bow (Has same functionality as bow from pre-beta 1.8)
+-Some inside code to easily toggle LOTO features
+
+Alpha 1.4.1:
+-Chris's Machine no longer disappears once right click
+-Re-Organized the mod code
+
+Alpha 1.4:
+-Added Kappa Fish and AMD Sword
+-Made Deal With It Glasses Equippable
+
+Alpha 1.3.5:
+-Fix Server Crashing
+
+Alpha 1.3:
+-Added Overlord Minion Mob
+
+Alpha 1.2:
+-Added Overlord's Tools
+
+Alpha 1.1.1:
+Re-Added the Chris's Machine Explosion Functionality
+
+Alpha 1.1:
+-Recoded the whole mod
+
+a1.0.6:
+-Replaced fuse sound with "GET OFF THE MACHINES"
+-Increased Explosion Radius
+-Increased fuse time slightly
+
+a1.0.5:
+-Removed the TNT texture from when the Machine is about to explode
+-Shortened fuse time
+-Increased Explosion Radius
+
+a1.0.4:
+-Made the Chris's Machine explode when right clicking with a GTX 970 Item
+
+a1.0.3:
+-Gave more items names
+
+a1.0.2:
+-Replaced the GTX 970 Block with Chris's Machine Block
+-Made GTX 970 an item instead
+
+a1.0.1:
+-Gave Items names
+-Added a GTX 970 Block
+
+Intial Mod Creation (a1.0):
+-Added Swastika Item
+-Added Chipmunk Summoning Card
+-Added Deal With It Glasses

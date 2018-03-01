@@ -1,0 +1,6 @@
+{
+    "parent":"drewmod:item/defaultitem",
+    "textures": {
+        "layer0":"drewmod:items/gtx970"
+    }
+}
