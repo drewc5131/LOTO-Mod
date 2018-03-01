@@ -24,7 +24,6 @@ import com.loto.baseloto.reg.CreateItems;
 public class DrewMod
 {
     public static final String MODID = "baseloto";
-    public static final String VERSION = "1.4.3";
     public EventHandler eventHandler = new EventHandler(this);
 	public RPCClient rpcClient;
     // TODO: Make server proxy

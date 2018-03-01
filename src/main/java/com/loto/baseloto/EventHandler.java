@@ -41,7 +41,7 @@ public class EventHandler {
     
     @SubscribeEvent
     public void onClientDisconnectionFromServerEvent(FMLNetworkEvent.ClientDisconnectionFromServerEvent event){
-    	main.proxy.rpcupdate(main, "Main Menu", "default", "On Main Menu", null, null);
+    	main.proxy.rpcupdate(main, "Main Menu", "mainmenu", "On Main Menu", null, null);
     }
     @SubscribeEvent
     public void onPlayerLoggedInEvent(PlayerLoggedInEvent event)
