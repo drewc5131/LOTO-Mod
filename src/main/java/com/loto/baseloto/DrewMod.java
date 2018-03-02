@@ -40,7 +40,7 @@ import com.loto.baseloto.reg.CreateItems;
 public class DrewMod
 {
     public static final String MODID = "baseloto";
-    public static final String VERSION = "1.5.0";
+    public static final String VERSION = "1.5.1";
     public EventHandler eventHandler = new EventHandler(this);
     
 	public RPCClient rpcClient;
@@ -114,7 +114,6 @@ public class DrewMod
 	}
 	
     @Mod.EventHandler
-    @SideOnly(Side.CLIENT)
     public void onInit(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -133,7 +132,7 @@ public class DrewMod
     @SubscribeEvent
     public void renderName(PlayerEvent.NameFormat event){
     	NBTTagCompound tag = event.getEntityPlayer().getEntityData();
-    	if(tag.hasKey("loto_customName")){event.setDisplayname(tag.getString("loto_customName"));System.out.println(tag.getString("loto_CustomName"));}
+    	if(tag.hasKey("loto_customName")){event.setDisplayname(tag.getString("loto_customName"));}
     	else{event.setDisplayname(event.getUsername());}
     }
     

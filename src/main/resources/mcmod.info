@@ -3,7 +3,7 @@
   "modid": "baseloto",
   "name": "LOTO Mod",
   "description": "Content for Legend of the Overlord / related series",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
