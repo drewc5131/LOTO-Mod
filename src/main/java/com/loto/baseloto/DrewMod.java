@@ -2,6 +2,9 @@ package com.loto.baseloto;
 
 import java.util.Iterator;
 
+import javax.annotation.Nullable;
+
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -25,6 +28,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
+import net.minecraftforge.fml.common.network.FMLNetworkEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
@@ -170,5 +174,21 @@ public class DrewMod
     		newPlayer.getEntityData().setString("loto_customName", original.getEntityData().getString("loto_customName"));
     	}
     }
+    @SubscribeEvent
+    public void onClientConnectedToServerEvent(FMLNetworkEvent.ClientConnectedToServerEvent event) {
+    	//String details, String largeImgKey, String largeImgText, String smallImgKey, String smallImgText
+    	@Nullable String name = Minecraft.getMinecraft().getSession().getUsername();
+    	System.out.println(name);
+    	String img = name.toLowerCase();
+        
+		if (event.isLocal())
+            proxy.rpcupdate(this, "In Game", img, name, "default", "Singleplayer");
+        else
+            proxy.rpcupdate(this, "In Game", img, name, "default", "On the LOTO Server");
+    }
     
+    @SubscribeEvent
+    public void onClientDisconnectionFromServerEvent(FMLNetworkEvent.ClientDisconnectionFromServerEvent event){
+    	proxy.rpcupdate(this, "Main Menu", "mainmenu", "On Main Menu", null, null);
+    }
 }
