@@ -45,7 +45,7 @@ public class DrewMod
     
 	public RPCClient rpcClient;
     // TODO: Make server proxy
-    @SidedProxy(clientSide = "com.loto.baseloto.proxy.ClientProxy", serverSide = "com.loto.baseloto.proxy.CommonProxy")
+    @SidedProxy(clientSide = "com.loto.baseloto.proxy.ClientProxy", serverSide = "com.loto.baseloto.proxy.ServerProxy")
     public static CommonProxy proxy;
     
     public static SimpleNetworkWrapper network;
