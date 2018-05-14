@@ -23,7 +23,7 @@ public class CreateMobs {
     			EntityOverlordMinionBossMob.class, "oberlordminionboss", 6970,
     			DrewMod.modInstance, 64, 1, true, 0x292727, 0xAD2121);
     	
-    	EntityRegistry.addSpawn(EntityOverlordMinionMob.class, 80, 2, 4, EnumCreatureType.MONSTER, Biomes.HELL, Biomes.FOREST, Biomes.DEFAULT, Biomes.JUNGLE, Biomes.TAIGA, Biomes.PLAINS, Biomes.EXTREME_HILLS);
+    	EntityRegistry.addSpawn(EntityOverlordMinionMob.class, 50, 2, 4, EnumCreatureType.MONSTER, Biomes.HELL, Biomes.FOREST, Biomes.DEFAULT, Biomes.JUNGLE, Biomes.TAIGA, Biomes.PLAINS, Biomes.EXTREME_HILLS);
     }
     
 
