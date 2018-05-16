@@ -44,7 +44,7 @@ import com.loto.baseloto.reg.CreateItems;
 public class DrewMod
 {
     public static final String MODID = "baseloto";
-    public static final String VERSION = "1.5.1";
+    public static final String VERSION = "1.5.2";
     public EventHandler eventHandler = new EventHandler(this);
     
 	public RPCClient rpcClient;
