@@ -65,7 +65,7 @@ public class DrewMod
     {
     	this.rpcClient = new RPCClient("413848023005659137");
         proxy.rpcinit(this);
-        proxy.rpcupdate(this, "Loading Pack", "loading", "LOADING", null, null);
+        proxy.rpcupdate(this, "Loading Pack", "loading", "LOADING", null, null, false);
     	// items blocks and mobs
     	proxy.createItems();
     	proxy.createBlocks();
@@ -125,7 +125,7 @@ public class DrewMod
     @Mod.EventHandler
     @SideOnly(Side.CLIENT)
     public void onPostInitEvent(FMLPostInitializationEvent event) {
-        proxy.rpcupdate(this, "Main Menu", "mainmenu", "On Main Menu", null, null);
+        proxy.rpcupdate(this, "Main Menu", "mainmenu", "On Main Menu", null, null, false);
     }
     
     @Mod.EventHandler
@@ -182,13 +182,25 @@ public class DrewMod
     	String img = name.toLowerCase();
         
 		if (event.isLocal())
-            proxy.rpcupdate(this, "In Game", img, name, "default", "Singleplayer");
-        else
-            proxy.rpcupdate(this, "In Game", img, name, "default", "On the LOTO Server");
+            proxy.rpcupdate(this, "Singleplayer", img, name, "default", Minecraft.getMinecraft().getIntegratedServer().getWorldName(), true);
+        else{
+        	String playerInfo = Minecraft.getMinecraft().getCurrentServerData().populationInfo;
+            proxy.rpcupdate(this, "Multiplayer " + playerInfo, img, name, "default", Minecraft.getMinecraft().getCurrentServerData().serverIP, true);
+        }
+    }
+        
+    @SubscribeEvent
+    public void onPlayerJoinEvent(PlayerLoggedInEvent event){
+    	@Nullable String name = Minecraft.getMinecraft().getSession().getUsername();
+    	System.out.println(name);
+    	String img = name.toLowerCase();
+    	
+    	if(!Minecraft.getMinecraft().isSingleplayer()){
+        proxy.rpcupdate(this, "Multiplayer " + Minecraft.getMinecraft().getCurrentServerData().populationInfo, img, name, "default", Minecraft.getMinecraft().getCurrentServerData().serverIP, false);}
     }
     
     @SubscribeEvent
     public void onClientDisconnectionFromServerEvent(FMLNetworkEvent.ClientDisconnectionFromServerEvent event){
-    	proxy.rpcupdate(this, "Main Menu", "mainmenu", "On Main Menu", null, null);
+    	proxy.rpcupdate(this, "Main Menu", "mainmenu", "On Main Menu", null, null, true);
     }
 }

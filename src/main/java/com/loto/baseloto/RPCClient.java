@@ -40,7 +40,7 @@ public class RPCClient {
 
     }
 
-    public void updatePresence(@Nullable String details, String largeImgKey, String largeImgText, String smallImgKey, String smallImgText)
+    public void updatePresence(@Nullable String details, String largeImgKey, String largeImgText, String smallImgKey, String smallImgText, boolean updateTime)
     {
         DiscordRichPresence presence = new DiscordRichPresence();
         presence.largeImageKey = largeImgKey;
@@ -49,7 +49,9 @@ public class RPCClient {
         presence.smallImageText = smallImgText;
         if (details != null){
             presence.details = details;
-            presence.startTimestamp = System.currentTimeMillis() / 1000;
+            if(updateTime){
+            	presence.startTimestamp = System.currentTimeMillis() / 1000;
+            }
         }
 
         DiscordRPC.INSTANCE.Discord_UpdatePresence(presence);

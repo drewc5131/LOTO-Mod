@@ -35,7 +35,7 @@ public class CommonProxy
 	{
 	}
 
-	public void rpcupdate(DrewMod main, String details, String largeImgKey, String largeImgText, String smallImgKey, String smallImgText) {
+	public void rpcupdate(DrewMod main, String details, String largeImgKey, String largeImgText, String smallImgKey, String smallImgText, boolean updateTime) {
 		// TODO Auto-generated method stub
 		
 	}

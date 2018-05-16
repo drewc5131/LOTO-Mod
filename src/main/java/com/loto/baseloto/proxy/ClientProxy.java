@@ -43,7 +43,7 @@ public class ClientProxy extends CommonProxy
         main.rpcClient.init();
     }
 
-    public void rpcupdate(DrewMod main, String details, String largeImgKey, String largeImgText, String smallImgKey, String smallImgText) {
-        main.rpcClient.updatePresence(details, largeImgKey, largeImgText, smallImgKey, smallImgText);
+    public void rpcupdate(DrewMod main, String details, String largeImgKey, String largeImgText, String smallImgKey, String smallImgText, boolean updateTime) {
+        main.rpcClient.updatePresence(details, largeImgKey, largeImgText, smallImgKey, smallImgText, updateTime);
     }
 }
