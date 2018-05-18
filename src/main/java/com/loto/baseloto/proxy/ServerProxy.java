@@ -8,17 +8,6 @@ public class ServerProxy extends CommonProxy
 {
 
 	@Override
-	public void initmainproxystuff()
-	{
-		
-	}
-	
-	@Override
-	public void registerRenderers()
-	{
-	}
-	
-	@Override
 	public void createMobs()
 	{
 		CreateMobs.createMobs();

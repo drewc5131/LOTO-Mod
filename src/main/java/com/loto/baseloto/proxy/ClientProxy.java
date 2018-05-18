@@ -1,5 +1,7 @@
 package com.loto.baseloto.proxy;
 
+import javax.annotation.Nullable;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -46,4 +48,15 @@ public class ClientProxy extends CommonProxy
     public void rpcupdate(DrewMod main, String details, String largeImgKey, String largeImgText, String smallImgKey, String smallImgText, boolean updateTime) {
         main.rpcClient.updatePresence(details, largeImgKey, largeImgText, smallImgKey, smallImgText, updateTime);
     }
+    
+    public void updateRpcPlayerCount(DrewMod main){
+    	@Nullable String name = Minecraft.getMinecraft().getSession().getUsername();
+    	System.out.println(name);
+    	String img = name.toLowerCase();
+    	
+    	if(!Minecraft.getMinecraft().isSingleplayer()){
+        rpcupdate(main, "Multiplayer " + Minecraft.getMinecraft().getCurrentServerData().populationInfo, img, name, "default", Minecraft.getMinecraft().getCurrentServerData().serverIP, false);}
+
+    }
+    
 }

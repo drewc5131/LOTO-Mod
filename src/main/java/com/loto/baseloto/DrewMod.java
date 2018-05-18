@@ -153,6 +153,7 @@ public class DrewMod
 				}
     		}
     	}
+    	proxy.updateRpcPlayerCount(this);
 	}
 	
     @SubscribeEvent
@@ -188,16 +189,7 @@ public class DrewMod
             proxy.rpcupdate(this, "Multiplayer " + playerInfo, img, name, "default", Minecraft.getMinecraft().getCurrentServerData().serverIP, true);
         }
     }
-        
-    @SubscribeEvent
-    public void onPlayerJoinEvent(PlayerLoggedInEvent event){
-    	@Nullable String name = Minecraft.getMinecraft().getSession().getUsername();
-    	System.out.println(name);
-    	String img = name.toLowerCase();
-    	
-    	if(!Minecraft.getMinecraft().isSingleplayer()){
-        proxy.rpcupdate(this, "Multiplayer " + Minecraft.getMinecraft().getCurrentServerData().populationInfo, img, name, "default", Minecraft.getMinecraft().getCurrentServerData().serverIP, false);}
-    }
+      
     
     @SubscribeEvent
     public void onClientDisconnectionFromServerEvent(FMLNetworkEvent.ClientDisconnectionFromServerEvent event){
