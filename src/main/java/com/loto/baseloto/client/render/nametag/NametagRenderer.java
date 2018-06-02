@@ -17,7 +17,7 @@ public class NametagRenderer {
 	}
 
 	public void renderLivingLabel(Entity entityIn, String name, double x,
-			double y, double z, int maxDistance) {
+			double y, double z, int maxDistance, boolean renderThroughBlocks) {
 		double d0 = entityIn
 				.getDistanceSqToEntity(this.renderManager.renderViewEntity);
 		double dist = entityIn
@@ -47,12 +47,12 @@ public class NametagRenderer {
 
 			float entityHeight = entityIn.height + 0.5F;
 			drawNameplate(name, (float) x, (float) y + entityHeight, (float) z,
-					(float) yaw, (float) pitch, Math.sqrt(dist));
+					(float) yaw, (float) pitch, Math.sqrt(dist), renderThroughBlocks);
 		}
 	}
 
 	public void drawNameplate(String name, float x, float y, float z,
-			float viewerYaw, float viewerPitch, double distance) {
+			float viewerYaw, float viewerPitch, double distance, boolean renderThroughBlocks) {
 		double distanceFromPlayer = Math.min(32, distance);
 		GlStateManager.pushMatrix();
 		GlStateManager.translate(x, y, z);
@@ -63,6 +63,10 @@ public class NametagRenderer {
 				* distanceFromPlayer * .55, 0.025F * distanceFromPlayer * .55);
 		GlStateManager.disableLighting();
 		GlStateManager.depthMask(false);
+		
+		if(renderThroughBlocks) {
+			GlStateManager.disableDepth();
+		}
 
 		GlStateManager.enableBlend();
 		GlStateManager
@@ -90,6 +94,10 @@ public class NametagRenderer {
 		this.renderManager.getFontRenderer().drawString(name,
 				-this.renderManager.getFontRenderer().getStringWidth(name) / 2,
 				0, -1);
+		
+		if(renderThroughBlocks) {
+			GlStateManager.enableDepth();
+		}
 
 		GlStateManager.depthMask(true);
 		GlStateManager.enableLighting();
