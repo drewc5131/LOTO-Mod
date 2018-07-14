@@ -59,8 +59,8 @@ public class NametagRenderer {
 		GlStateManager.glNormal3f(0.0F, 1.0F, 0.0F);
 		GlStateManager.rotate(-viewerYaw, 0.0F, 1.0F, 0.0F);
 		GlStateManager.rotate(viewerPitch, 1.0F, 0.0F, 0.0F);
-		GlStateManager.scale(-0.025F * distanceFromPlayer * .55, -0.025F
-				* distanceFromPlayer * .55, 0.025F * distanceFromPlayer * .55);
+		GlStateManager.scale(-0.025F * distanceFromPlayer * .45, -0.025F
+				* distanceFromPlayer * .45, 0.025F * distanceFromPlayer * .55);
 		GlStateManager.disableLighting();
 		GlStateManager.depthMask(false);
 

@@ -11,11 +11,12 @@ public class DrewSoundEvents {
 	
 
 	public static SoundEvent machines;
+	public static SoundEvent despacito;
 
 
 	public void RegisterSounds(RegistryEvent.Register<SoundEvent> event)
 	{
-		event.getRegistry().registerAll(machines);
+		event.getRegistry().registerAll(machines, despacito);
 	}
 	
 }

@@ -13,10 +13,10 @@ import com.loto.baseloto.client.render.nametag.NametagRenderer;
 public class RenderOverlordMinionMob extends RenderBiped {
 	public NametagRenderer nametagRenderer;
 	private static final ResourceLocation mobTextures = new ResourceLocation(
-			"baseloto:textures/entity/OverlordMinion.png");
+			"baseloto:textures/entity/gsgame_loto_mob_overlordminion.png");
 
 	public RenderOverlordMinionMob(RenderManager renderManagerIn) {
-		super(renderManagerIn, new ModelOverlordMinion(), 0.5f);
+		super(renderManagerIn, new ModelOverlordMinion(), 0.4f);
 		nametagRenderer = new NametagRenderer(renderManagerIn);
 
 	}

@@ -1,3 +1,4 @@
 {
- "machines": {"category": "master","sounds": [{"name": "drewmod:machines","stream": false}]}
+ "machines": {"category": "master","sounds": [{"name": "baseloto:machines","stream": true}]},
+ "despacito": {"category": "master","sounds": [{"name": "baseloto:despacito","stream": true}]}
 }

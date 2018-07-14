@@ -1,6 +1,7 @@
 package com.loto.baseloto.reg;
 
 import com.loto.baseloto.DrewMod;
+import com.loto.baseloto.backend.sound.DrewSoundEvents;
 import com.loto.baseloto.items.*;
 
 import net.minecraft.block.Block;
@@ -28,7 +29,8 @@ public class CreateItems
 	public static Item fireballlauncher;
 	public static Item mythicalPickaxe = new ItemMythicalPickaxe(mythicalToolMaterial).setUnlocalizedName("mythicalPickaxe").setRegistryName("mythicalPickaxe").setCreativeTab(DrewMod.tabLoto);
 	public static Item netherShard = new NetherShard().setUnlocalizedName("nethershard").setRegistryName("nethershard").setCreativeTab(DrewMod.tabLoto);
-
+	public static Item despacitoDisk = new DespacitoDisk("despacito", DrewSoundEvents.despacito);
+	
 	public static ResourceLocation OVERLORD_MINION_DROPS = LootTableList.register(new ResourceLocation("baseloto", "entities/overlord_minion"));
 	
     public static void register(IForgeRegistry<Item> registry){
