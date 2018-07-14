@@ -18,7 +18,7 @@ import net.minecraftforge.common.util.EnumHelper;
 
 public class CreateItems
 {
-	public static final Item.ToolMaterial oberlordToolMaterial = EnumHelper.addToolMaterial("oberlordToolMaterial", 5, 16542, 20.0F, 16.0F, 30);
+	public static final Item.ToolMaterial oberlordToolMaterial = EnumHelper.addToolMaterial("oberlordToolMaterial", 5, 16542, 40.0F, 32.0F, 30);
 	public static final Item.ToolMaterial mythicalToolMaterial = EnumHelper.addToolMaterial("mythicalToolMaterial", 5, 4000, 8.0F, 6.0F, 20);
 	public static Item chipmunkcard = new ChipmunkCard().setUnlocalizedName("chipmunkcard").setRegistryName("chipmunkcard").setCreativeTab(DrewMod.tabLoto);
 	public static Item Gtx970 = new Gtx970().setUnlocalizedName("Gtx970").setRegistryName("Gtx970").setCreativeTab(DrewMod.tabDrew);
