@@ -16,6 +16,7 @@ import com.loto.baseloto.mob.EntityOverlordMinionMob;
 import com.loto.baseloto.reg.CreateBlocks;
 import com.loto.baseloto.reg.CreateItems;
 import com.loto.baseloto.reg.CreateMobs;
+import com.loto.baseloto.reg.CreateSounds;
 
 public class ClientProxy extends CommonProxy
 {
@@ -34,11 +35,15 @@ public class ClientProxy extends CommonProxy
 		RenderingRegistry.registerEntityRenderingHandler(EntityOverlordMinionBossMob.class, new RenderOverlordMinionBossMob(Minecraft.getMinecraft().getRenderManager()));
 
 	}
-	
+
 	@Override
 	public void createMobs()
 	{
 		CreateMobs.createMobs();
+	}
+	
+	@Override
+	public void createSounds(){
 	}
 	
     public void rpcinit(DrewMod main) {

@@ -3,9 +3,9 @@ package com.loto.baseloto.block;
 import java.util.List;
 
 import com.loto.baseloto.DrewMod;
-import com.loto.baseloto.backend.sound.DrewSoundEvents;
 import com.loto.baseloto.machine.EntityMachinePrimed;
 import com.loto.baseloto.reg.CreateItems;
+import com.loto.baseloto.reg.CreateSounds;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockTNT;
@@ -65,7 +65,7 @@ public class ChrisMachine extends Block
             {
                 EntityMachinePrimed entitytntprimed = new EntityMachinePrimed(worldIn, (double)((float)pos.getX() + 0.5F), (double)pos.getY(), (double)((float)pos.getZ() + 0.5F), igniter);
                 worldIn.spawnEntity(entitytntprimed);
-                worldIn.playSound((EntityPlayer)null, entitytntprimed.posX, entitytntprimed.posY, entitytntprimed.posZ, DrewSoundEvents.machines, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                worldIn.playSound((EntityPlayer)null, entitytntprimed.posX, entitytntprimed.posY, entitytntprimed.posZ, CreateSounds.machines, SoundCategory.BLOCKS, 1.0F, 1.0F);
             }
         }
     }

@@ -11,6 +11,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -39,6 +40,7 @@ import com.loto.baseloto.namethings.CustomNamePacket;
 import com.loto.baseloto.namethings.CustomNamePacketHandler;
 import com.loto.baseloto.proxy.CommonProxy;
 import com.loto.baseloto.reg.CreateItems;
+import com.loto.baseloto.reg.CreateSounds;
 
 @Mod(modid = DrewMod.MODID, version = DrewMod.VERSION)
 public class DrewMod
@@ -98,11 +100,17 @@ public class DrewMod
 	
 	@Mod.EventBusSubscriber
 	public static class RegistrationHandler {
-
+		
+		@SubscribeEvent
+		public static void registerSounds(RegistryEvent.Register<SoundEvent> event){
+			CreateSounds.RegisterSounds(event.getRegistry());
+			
+		}
 		@SubscribeEvent
 		public static void registerItems(RegistryEvent.Register<Item> event) {
 			CreateItems.register(event.getRegistry());
 		}
+		
 		@SubscribeEvent
 		public static void registerItems(ModelRegistryEvent event) {
 			CreateItems.registerModels();

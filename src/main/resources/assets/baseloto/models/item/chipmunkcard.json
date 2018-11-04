@@ -1,6 +1,46 @@
 {
-    "parent":"baseloto:item/defaultitem",
-    "textures": {
-        "layer0":"baseloto:items/chipmunkcard"
-    }
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "baseloto:items/chipmunkcard",
+		"particle": "baseloto:items/chipmunkcard"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 8],
+			"to": [16, 16, 9],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"east": {"uv": [3.44375, 12.6, 12.61955, 14.57657], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [3.44375, 12.6, 12.61955, 14.57657], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [3.44375, 12.6, 12.61955, 14.57657], "texture": "#0"},
+				"down": {"uv": [3.44375, 12.6, 12.61955, 14.57657], "rotation": 180, "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 90, 0],
+			"scale": [0.5, 0.5, 0.5],
+			"translation": [-0.5, 1.5, 0]
+		},
+		"gui": {
+			"scale": [0.9, 0.9, 0.9]
+		},
+		"fixed": {
+			"translation": [0, 0, -1]
+		},
+		"ground": {
+			"translation": [0, 6.5, 0]
+		},
+		"firstperson_righthand": {
+			"scale": [0.8, 0.8, 0.8],
+			"translation": [-0.5, 3.5, -3.5],
+			"rotation": [-15, -32, -8]
+		},
+		"head": {
+			"scale": [0.8, 0.8, 1],
+			"translation": [0, 0, -7.5]
+		}
+	}
 }
