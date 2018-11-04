@@ -1057,11 +1057,11 @@
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [45, 0, 90],
-			"translation": [-7.5, 5, 1.5]
+			"translation": [-7.5, 4.5, 1.5]
 		},
 		"firstperson_righthand": {
-			"rotation": [56, 0, 90],
-			"translation": [0, 0, -6]
+			"rotation": [61, 0, 90],
+			"translation": [0, 2, -4.5]
 		},
 		"ground": {
 			"translation": [0, 5.5, 0]
@@ -1071,7 +1071,8 @@
 			"rotation": [90, 0, 0]
 		},
 		"gui": {
-			"rotation": [90, 0, 0]
+			"rotation": [90, 0, 0],
+			"translation": [0, 0, 0]
 		}
 	},
 	"groups": [
