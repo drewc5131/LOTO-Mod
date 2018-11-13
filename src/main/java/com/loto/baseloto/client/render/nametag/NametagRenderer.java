@@ -57,7 +57,7 @@ public class NametagRenderer {
 	public void drawNameplate(String name, float x, float y, float z,
 			float viewerYaw, float viewerPitch, double distance,
 			boolean renderThroughBlocks) {
-		double distanceFromPlayer = Math.min(32, distance);
+		double distanceFromPlayer = Math.max(Math.min(32, distance), 2);
 		GlStateManager.pushMatrix();
 		GlStateManager.translate(x, y, z);
 		GlStateManager.glNormal3f(0.0F, 1.0F, 0.0F);
@@ -94,10 +94,9 @@ public class NametagRenderer {
 		GL11.glDisable(GL11.GL_POLYGON_SMOOTH);
 
 		GlStateManager.enableTexture2D();
-
 		this.renderManager.getFontRenderer().drawString(name,
 				-this.renderManager.getFontRenderer().getStringWidth(name) / 2,
-				0, -1);
+				0, -1, true);
 
 		if (renderThroughBlocks) {
 			GlStateManager.enableDepth();
