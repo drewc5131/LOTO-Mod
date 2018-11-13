@@ -172,7 +172,7 @@ public class DrewMod {
 				in.close();
 				if (Integer.parseInt(version.replace(".", "")) != Integer.parseInt(VERSION.replace(".", ""))) {
 					Minecraft.getMinecraft().displayGuiScreen(
-							new NewUpdateNotification());
+							new NewUpdateNotification(version));
 					System.out.println(Integer.parseInt(version.replace(".", "")) + ":" + Integer.parseInt(VERSION.replace(".", "")));
 				}
 
@@ -276,7 +276,12 @@ public class DrewMod {
 class NewUpdateNotification extends GuiScreen {
 	String text = "";
 	Minecraft mc;
+	String currentVersion;
 
+	public NewUpdateNotification(String version){
+		currentVersion = version;
+	}
+	
 	public void initGui() {
 		mc = Minecraft.getMinecraft();
 		ScaledResolution scaled = new ScaledResolution(mc);
@@ -307,7 +312,7 @@ class NewUpdateNotification extends GuiScreen {
 			try {
 				Desktop.getDesktop()
 						.browse(new URI(
-								"https://github.com/drewc5131/LOTO-Mod/releases"));
+								"https://github.com/drewc5131/LOTO-Mod/releases/tag/" + currentVersion));
 			} catch (URISyntaxException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
