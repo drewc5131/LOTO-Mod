@@ -68,24 +68,21 @@ public class DrewMod
     	this.rpcClient = new RPCClient("413848023005659137");
         proxy.rpcinit(this);
         proxy.rpcupdate(this, "Loading Pack", "loading", "LOADING", null, null, false);
-    	// items blocks and mobs
+		// items blocks and mobs
     	proxy.createItems();
     	proxy.createBlocks();
     	proxy.createMobs();
     	
     	// Register all the item renderers
-    	proxy.registerRenderers(); 
-
-
-       	
+    	proxy.registerRenderers();
     }
+    
 	public static CreativeTabs tabDrew = new CreativeTabs("tabDrew"){
 		@Override
 		public ItemStack getTabIconItem()
 		{
 			return new ItemStack(CreateItems.Gtx970);
 		}
-		
 		
 	};
 	
