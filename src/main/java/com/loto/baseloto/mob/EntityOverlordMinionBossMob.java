@@ -127,7 +127,7 @@ public class EntityOverlordMinionBossMob extends EntityMob implements IMob {
             EntityLivingBase entitylivingbase = this.parentEntity.getAttackTarget();
             double d0 = 64.0D;
 
-            if (entitylivingbase.getDistanceSqToEntity(this.parentEntity) < 4096.0D && this.parentEntity.canEntityBeSeen(entitylivingbase))
+            if (entitylivingbase.getDistance(this.parentEntity) < 4096.0D && this.parentEntity.canEntityBeSeen(entitylivingbase))
             {
                 World world = this.parentEntity.world;
                 ++this.attackTimer;

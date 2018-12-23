@@ -158,6 +158,7 @@ public class DrewMod {
 	}
 
 	@SubscribeEvent
+    @SideOnly(Side.CLIENT)
 	public void guiEvent(GuiScreenEvent.InitGuiEvent event) {
 		if (event.getGui() instanceof GuiMainMenu) {
 			URL ver;

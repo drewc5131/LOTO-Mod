@@ -21,13 +21,13 @@ public class ItemOberlordAxe extends ItemTool
     public ItemOberlordAxe(Item.ToolMaterial material)
     {
         super(material, EFFECTIVE_ON);
-        this.damageVsEntity = ATTACK_DAMAGE;
+        this.attackDamage = ATTACK_DAMAGE;
         this.attackSpeed = ATTACK_SPEED;
     }
 
     public float getStrVsBlock(ItemStack stack, IBlockState state)
     {
         Material material = state.getMaterial();
-        return material != Material.WOOD && material != Material.PLANTS && material != Material.VINE ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
+        return material != Material.WOOD && material != Material.PLANTS && material != Material.VINE ? super.getDestroySpeed(stack, state) : this.efficiency;
     }
 }

@@ -21,9 +21,9 @@ public class NametagRenderer {
 	public void renderLivingLabel(Entity entityIn, String name, double x,
 			double y, double z, int maxDistance, boolean renderThroughBlocks) {
 		double d0 = entityIn
-				.getDistanceSqToEntity(this.renderManager.renderViewEntity);
+				.getDistanceSq(this.renderManager.renderViewEntity);
 		double dist = entityIn
-				.getDistanceToEntity(this.renderManager.renderViewEntity);
+				.getDistance(this.renderManager.renderViewEntity);
 
 		if (dist <= (double) (maxDistance)) {
 			double dirx = this.renderManager.renderViewEntity.posX

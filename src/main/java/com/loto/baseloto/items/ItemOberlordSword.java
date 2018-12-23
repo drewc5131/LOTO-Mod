@@ -26,7 +26,7 @@ public class ItemOberlordSword extends ItemSword {
 	public ItemOberlordSword(ToolMaterial material, float Speed) {
 		super(material);
 		this.attackSpeed = Speed;
-		this.attackDamage = material.getDamageVsEntity();
+		this.attackDamage = material.getAttackDamage();
 	}
 
 	
