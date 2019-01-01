@@ -18,7 +18,9 @@ public class BlockRenderRegister
 
 	public static void reg(Block block)
 	{
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new net.minecraft.client.renderer.block.model.ModelResourceLocation("DrewMod:" + block.getUnlocalizedName().substring(5),"inventory"));
+		System.out.println("[LOTO] Registering Block Model "+ block.getRegistryName());
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0,
+				new ModelResourceLocation(block.getRegistryName(), "inventory"));
 
 	}
 

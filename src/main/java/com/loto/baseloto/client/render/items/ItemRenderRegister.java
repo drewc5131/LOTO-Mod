@@ -25,7 +25,8 @@ public class ItemRenderRegister
 
 	public static void reg(Item item, int meta)
 	{
-		ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation("baseloto:" + item.getUnlocalizedName().substring(5)));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0,
+				new ModelResourceLocation(item.getRegistryName(), "inventory"));
 	}
 
 }

@@ -3,8 +3,11 @@ package com.loto.baseloto.reg;
 import com.loto.baseloto.block.BlockOverlordStone;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
@@ -15,12 +18,22 @@ public class CreateBlocks
 {
 	public static Block chrisMachine;
 	public static Block overlordStone;
-    public static void registerBlocks(IForgeRegistry<Block> registry)
+	
+	public static Item chrisMachineItem;
+	public static Item overlordStoneItem;
+	
+    public static void registerBlocks()
     {
-    	chrisMachine = new ChrisMachine().setUnlocalizedName("chrisMachine").setCreativeTab(DrewMod.tabDrew);
+    	chrisMachine = new ChrisMachine().setUnlocalizedName("chrisMachine").setRegistryName("chrismachine").setCreativeTab(DrewMod.tabDrew);
     	overlordStone = new BlockOverlordStone().setUnlocalizedName("overlordStone").setCreativeTab(DrewMod.tabLoto);
+		
+    	chrisMachineItem = new ItemBlock(chrisMachine).setRegistryName(chrisMachine.getRegistryName());
+    	overlordStoneItem = new ItemBlock(overlordStone).setRegistryName(overlordStone.getRegistryName());
 
-    	registry.registerAll(chrisMachine);
+    	System.out.println("[LOTO] Registering Blocks...");
+    	ForgeRegistries.BLOCKS.registerAll(chrisMachine, overlordStone);
+    	ForgeRegistries.ITEMS.registerAll(chrisMachineItem, overlordStoneItem);
+    	System.out.println("[LOTO] Registering Blocks... DONE");
 
     }
     

@@ -12,5 +12,4 @@ public class ServerProxy extends CommonProxy
 	{
 		CreateMobs.createMobs();
 	}
-	
 }

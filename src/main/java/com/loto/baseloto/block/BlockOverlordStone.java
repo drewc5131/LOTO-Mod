@@ -6,5 +6,6 @@ import net.minecraft.block.material.Material;
 public class BlockOverlordStone extends Block {
     public BlockOverlordStone() {
         super(Material.ROCK);
+        this.setRegistryName("baseloto", "overlordstone");
     }
 }

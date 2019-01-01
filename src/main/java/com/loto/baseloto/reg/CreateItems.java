@@ -5,12 +5,14 @@ import com.loto.baseloto.items.*;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.common.util.EnumHelper;
@@ -29,16 +31,12 @@ public class CreateItems
 	public static Item mythicalPickaxe = new ItemMythicalPickaxe(mythicalToolMaterial).setUnlocalizedName("mythicalPickaxe").setRegistryName("mythicalPickaxe").setCreativeTab(DrewMod.tabLoto);
 	public static Item netherShard = new NetherShard().setUnlocalizedName("nethershard").setRegistryName("nethershard").setCreativeTab(DrewMod.tabLoto);
 	public static Item despacitoDisk = (new DespacitoDisk("despacito", CreateSounds.despacito)).setUnlocalizedName("despacito").setRegistryName("despacitodisk").setCreativeTab(DrewMod.tabLoto);
-	
+
 	public static ResourceLocation OVERLORD_MINION_DROPS = LootTableList.register(new ResourceLocation("baseloto", "entities/overlord_minion"));
 	
-    public static void register(IForgeRegistry<Item> registry){
-    	registry.registerAll(chipmunkcard, Gtx970, KappaFish, oberlordSword, oberlordAxe, mythicalPickaxe, despacitoDisk);
+    public static void register(){
+    	ForgeRegistries.ITEMS.registerAll(chipmunkcard, Gtx970, KappaFish, oberlordSword, oberlordAxe, mythicalPickaxe, despacitoDisk);
     }
-    
-    public static void registerModels(){
-    	DrewMod.proxy.registerRenderers();
-    	
-    }
+   
     
 }

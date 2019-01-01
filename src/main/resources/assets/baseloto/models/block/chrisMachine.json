@@ -1,7 +1,7 @@
 {
     "textures": {
-        "0": "drewmod:blocks/machine.side",
-        "1": "drewmod:blocks/chrismachine"
+        "0": "baseloto:blocks/machine.side",
+        "1": "baseloto:blocks/chrismachine"
     },
     "elements": [
         {

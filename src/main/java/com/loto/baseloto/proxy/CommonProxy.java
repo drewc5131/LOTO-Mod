@@ -8,6 +8,8 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 import com.loto.baseloto.DrewMod;
 import com.loto.baseloto.gui.GuiHandler;
+import com.loto.baseloto.reg.CreateBlocks;
+import com.loto.baseloto.reg.CreateItems;
 
 
 
@@ -23,12 +25,12 @@ public class CommonProxy
 	{
 	}
 	
-	public void createBlocks()
-	{
+	public void createBlocks(){
+		CreateBlocks.registerBlocks();
 	}
 	
-	public void createItems()
-	{
+	public void createItems(){
+		CreateItems.register();
 	}
 	
 	public void createMobs()

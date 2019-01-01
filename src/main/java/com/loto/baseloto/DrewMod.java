@@ -88,10 +88,6 @@ public class DrewMod {
 		proxy.rpcinit(this);
 		proxy.rpcupdate(this, "Loading Pack", "loading", "LOADING", null, null,
 				false);
-		// items blocks and mobs
-		proxy.createItems();
-		proxy.createBlocks();
-		proxy.createMobs();
 
 		// Register all the item renderers
 		proxy.registerRenderers();
@@ -122,27 +118,14 @@ public class DrewMod {
 
 		}
 		
-		@SubscribeEvent
-		public static void registerBlocks(RegistryEvent.Register<Block> event){
-			CreateBlocks.registerBlocks(event.getRegistry());
-		}
-		
-		
-
-		@SubscribeEvent
-		public static void registerItems(RegistryEvent.Register<Item> event) {
-			CreateItems.register(event.getRegistry());
-		}
-
-		@SubscribeEvent
-		public static void registerModels(ModelRegistryEvent event) { 
-			proxy.registerRenderers();
-		}
 
 	}
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		proxy.createItems();
+		proxy.createBlocks();
+		proxy.createMobs();
 		network = NetworkRegistry.INSTANCE.newSimpleChannel("LOTONetChannel");
 		network.registerMessage(CustomNamePacketHandler.class,
 				CustomNamePacket.class, 0, Side.CLIENT);
