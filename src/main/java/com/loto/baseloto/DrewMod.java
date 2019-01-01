@@ -13,6 +13,8 @@ import java.util.Iterator;
 import javax.annotation.Nullable;
 import javax.swing.JOptionPane;
 
+
+import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiButton;
@@ -57,6 +59,7 @@ import com.loto.baseloto.namethings.CommandCustomName;
 import com.loto.baseloto.namethings.CustomNamePacket;
 import com.loto.baseloto.namethings.CustomNamePacketHandler;
 import com.loto.baseloto.proxy.CommonProxy;
+import com.loto.baseloto.reg.CreateBlocks;
 import com.loto.baseloto.reg.CreateItems;
 import com.loto.baseloto.reg.CreateSounds;
 
@@ -118,6 +121,13 @@ public class DrewMod {
 			CreateSounds.RegisterSounds(event.getRegistry());
 
 		}
+		
+		@SubscribeEvent
+		public static void registerBlocks(RegistryEvent.Register<Block> event){
+			CreateBlocks.registerBlocks(event.getRegistry());
+		}
+		
+		
 
 		@SubscribeEvent
 		public static void registerItems(RegistryEvent.Register<Item> event) {
@@ -125,8 +135,8 @@ public class DrewMod {
 		}
 
 		@SubscribeEvent
-		public static void registerItems(ModelRegistryEvent event) {
-			CreateItems.registerModels();
+		public static void registerModels(ModelRegistryEvent event) { 
+			proxy.registerRenderers();
 		}
 
 	}

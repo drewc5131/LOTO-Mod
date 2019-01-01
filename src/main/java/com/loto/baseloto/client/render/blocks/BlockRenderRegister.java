@@ -12,7 +12,8 @@ public class BlockRenderRegister
 {
 	public static void registerBlockRenderer()
 	{
-		//reg(CreateBlocks.chrisMachine);
+		reg(CreateBlocks.chrisMachine);
+		reg(CreateBlocks.overlordStone);
 	}
 
 	public static void reg(Block block)
