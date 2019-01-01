@@ -104,7 +104,7 @@ public class DrewMod {
 	public static CreativeTabs tabLoto = new CreativeTabs("tabLoto") {
 		@Override
 		public ItemStack getTabIconItem() {
-			return new ItemStack(CreateItems.oberlordSword);
+			return new ItemStack(CreateItems.overlordSword);
 		}
 	};
 

@@ -11,6 +11,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 
 public class ChipmunkCard extends Item {
@@ -27,12 +28,15 @@ public class ChipmunkCard extends Item {
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer entity, EnumHand hand) {
 			ItemStack itemstack = entity.getHeldItem(hand);
 
+			entity.sendStatusMessage(new TextComponentTranslation("item.chipmunkcard.notifydisabled", new Object[0]), true);
+			
 			// Get the server
-			{MinecraftServer minecraftserver = world.getMinecraftServer();
+			/*{MinecraftServer minecraftserver = world.getMinecraftServer();
 			if(minecraftserver != null)
 				
 				// Run the command
 				minecraftserver.getCommandManager().executeCommand((EntityPlayer)entity, "tpahere chipmunk48");} // tp chipmunk48 @p
+			*/
 			
 			// Apply a cool down to the card - 60 ticks (3 second cooldown)
 			entity.getCooldownTracker().setCooldown(this, 60);

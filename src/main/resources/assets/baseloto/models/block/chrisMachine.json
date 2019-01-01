@@ -1,6 +1,6 @@
 {
     "textures": {
-        "0": "baseloto:blocks/machine.side",
+        "0": "baseloto:blocks/chrismachine_side",
         "1": "baseloto:blocks/chrismachine"
     },
     "elements": [

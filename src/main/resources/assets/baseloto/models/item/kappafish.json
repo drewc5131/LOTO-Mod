@@ -1,6 +1,6 @@
 {
     "parent":"item/handheld",
     "textures": {
-        "layer0":"baseloto:items/item.kappafish"
+        "layer0":"baseloto:items/kappafish"
     }
 }

@@ -18,8 +18,8 @@ public class ItemRenderRegister
 	    reg(CreateItems.chipmunkcard, 0);
 	    reg(CreateItems.Gtx970, 0);
 	    reg(CreateItems.KappaFish, 0);
-	    reg(CreateItems.oberlordSword, 0);
-	    reg(CreateItems.oberlordAxe, 0);
+	    reg(CreateItems.overlordSword, 0);
+	    reg(CreateItems.overlordAxe, 0);
 	    reg(CreateItems.mythicalPickaxe, 0);
 	}
 

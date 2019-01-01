@@ -24,8 +24,8 @@ public class CreateBlocks
 	
     public static void registerBlocks()
     {
-    	chrisMachine = new ChrisMachine().setUnlocalizedName("chrisMachine").setRegistryName("chrismachine").setCreativeTab(DrewMod.tabDrew);
-    	overlordStone = new BlockOverlordStone().setUnlocalizedName("overlordStone").setCreativeTab(DrewMod.tabLoto);
+    	chrisMachine = new ChrisMachine().setUnlocalizedName("chrismachine").setRegistryName("chrismachine").setCreativeTab(DrewMod.tabDrew);
+    	overlordStone = new BlockOverlordStone().setUnlocalizedName("overlordstone").setCreativeTab(DrewMod.tabLoto);
 		
     	chrisMachineItem = new ItemBlock(chrisMachine).setRegistryName(chrisMachine.getRegistryName());
     	overlordStoneItem = new ItemBlock(overlordStone).setRegistryName(overlordStone.getRegistryName());

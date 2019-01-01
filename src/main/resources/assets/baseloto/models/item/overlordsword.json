@@ -1,12 +1,12 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "baseloto:items/oberlordsword",
-		"particle": "baseloto:items/oberlordsword"
+		"0": "baseloto:items/overlordsword",
+		"particle": "baseloto:items/overlordsword"
 	},
 	"elements": [
 		{
-			"name": "oberlordsword_0",
+			"name": "overlordsword_0",
 			"from": [13, 0, 1],
 			"to": [14, 1, 2],
 			"faces": {
@@ -19,7 +19,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_1",
+			"name": "overlordsword_1",
 			"from": [14, 0, 1],
 			"to": [15, 1, 2],
 			"faces": {
@@ -32,7 +32,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_2",
+			"name": "overlordsword_2",
 			"from": [12, 0, 2],
 			"to": [13, 1, 3],
 			"faces": {
@@ -45,7 +45,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_3",
+			"name": "overlordsword_3",
 			"from": [13, 0, 2],
 			"to": [14, 1, 3],
 			"faces": {
@@ -58,7 +58,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_4",
+			"name": "overlordsword_4",
 			"from": [14, 0, 2],
 			"to": [15, 1, 3],
 			"faces": {
@@ -71,7 +71,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_5",
+			"name": "overlordsword_5",
 			"from": [11, 0, 3],
 			"to": [12, 1, 4],
 			"faces": {
@@ -84,7 +84,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_6",
+			"name": "overlordsword_6",
 			"from": [12, 0, 3],
 			"to": [13, 1, 4],
 			"faces": {
@@ -97,7 +97,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_7",
+			"name": "overlordsword_7",
 			"from": [13, 0, 3],
 			"to": [14, 1, 4],
 			"faces": {
@@ -110,7 +110,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_8",
+			"name": "overlordsword_8",
 			"from": [10, 0, 4],
 			"to": [11, 1, 5],
 			"faces": {
@@ -123,7 +123,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_9",
+			"name": "overlordsword_9",
 			"from": [11, 0, 4],
 			"to": [12, 1, 5],
 			"faces": {
@@ -136,7 +136,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_10",
+			"name": "overlordsword_10",
 			"from": [12, 0, 4],
 			"to": [13, 1, 5],
 			"faces": {
@@ -149,7 +149,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_11",
+			"name": "overlordsword_11",
 			"from": [9, 0, 5],
 			"to": [10, 1, 6],
 			"faces": {
@@ -162,7 +162,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_12",
+			"name": "overlordsword_12",
 			"from": [10, 0, 5],
 			"to": [11, 1, 6],
 			"faces": {
@@ -175,7 +175,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_13",
+			"name": "overlordsword_13",
 			"from": [11, 0, 5],
 			"to": [12, 1, 6],
 			"faces": {
@@ -188,7 +188,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_14",
+			"name": "overlordsword_14",
 			"from": [8, 0, 6],
 			"to": [9, 1, 7],
 			"faces": {
@@ -201,7 +201,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_15",
+			"name": "overlordsword_15",
 			"from": [9, 0, 6],
 			"to": [10, 1, 7],
 			"faces": {
@@ -214,7 +214,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_16",
+			"name": "overlordsword_16",
 			"from": [10, 0, 6],
 			"to": [11, 1, 7],
 			"faces": {
@@ -227,7 +227,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_17",
+			"name": "overlordsword_17",
 			"from": [3, 0, 7],
 			"to": [4, 1, 8],
 			"faces": {
@@ -240,7 +240,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_18",
+			"name": "overlordsword_18",
 			"from": [7, 0, 7],
 			"to": [8, 1, 8],
 			"faces": {
@@ -253,7 +253,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_19",
+			"name": "overlordsword_19",
 			"from": [8, 0, 7],
 			"to": [9, 1, 8],
 			"faces": {
@@ -266,7 +266,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_20",
+			"name": "overlordsword_20",
 			"from": [9, 0, 7],
 			"to": [10, 1, 8],
 			"faces": {
@@ -279,7 +279,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_21",
+			"name": "overlordsword_21",
 			"from": [4, 0, 8],
 			"to": [5, 1, 9],
 			"faces": {
@@ -292,7 +292,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_22",
+			"name": "overlordsword_22",
 			"from": [6, 0, 8],
 			"to": [7, 1, 9],
 			"faces": {
@@ -305,7 +305,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_23",
+			"name": "overlordsword_23",
 			"from": [7, 0, 8],
 			"to": [8, 1, 9],
 			"faces": {
@@ -318,7 +318,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_24",
+			"name": "overlordsword_24",
 			"from": [8, 0, 8],
 			"to": [9, 1, 9],
 			"faces": {
@@ -331,7 +331,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_25",
+			"name": "overlordsword_25",
 			"from": [4, 0, 9],
 			"to": [5, 1, 10],
 			"faces": {
@@ -344,7 +344,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_26",
+			"name": "overlordsword_26",
 			"from": [6, 0, 9],
 			"to": [7, 1, 10],
 			"faces": {
@@ -357,7 +357,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_27",
+			"name": "overlordsword_27",
 			"from": [7, 0, 9],
 			"to": [8, 1, 10],
 			"faces": {
@@ -370,7 +370,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_28",
+			"name": "overlordsword_28",
 			"from": [5, 0, 10],
 			"to": [6, 1, 11],
 			"faces": {
@@ -383,7 +383,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_29",
+			"name": "overlordsword_29",
 			"from": [3, 0.25, 11],
 			"to": [4, 0.75, 12],
 			"faces": {
@@ -396,7 +396,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_30",
+			"name": "overlordsword_30",
 			"from": [4, 0.25, 11],
 			"to": [5, 0.75, 12],
 			"faces": {
@@ -409,7 +409,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_31",
+			"name": "overlordsword_31",
 			"from": [6, 0, 11],
 			"to": [7, 1, 12],
 			"faces": {
@@ -422,7 +422,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_32",
+			"name": "overlordsword_32",
 			"from": [7, 0, 11],
 			"to": [8, 1, 12],
 			"faces": {
@@ -435,7 +435,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_33",
+			"name": "overlordsword_33",
 			"from": [2, 0.25, 12],
 			"to": [3, 0.75, 13],
 			"faces": {
@@ -448,7 +448,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_34",
+			"name": "overlordsword_34",
 			"from": [3, 0.25, 12],
 			"to": [4, 0.75, 13],
 			"faces": {
@@ -461,7 +461,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_35",
+			"name": "overlordsword_35",
 			"from": [4, 0.25, 12],
 			"to": [5, 0.75, 13],
 			"faces": {
@@ -474,7 +474,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_36",
+			"name": "overlordsword_36",
 			"from": [8, 0, 12],
 			"to": [9, 1, 13],
 			"faces": {
@@ -487,7 +487,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_37",
+			"name": "overlordsword_37",
 			"from": [2, 0.25, 13],
 			"to": [3, 0.75, 14],
 			"faces": {
@@ -500,7 +500,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_38",
+			"name": "overlordsword_38",
 			"from": [3, 0.25, 13],
 			"to": [4, 0.75, 14],
 			"faces": {
@@ -513,7 +513,7 @@
 			}
 		},
 		{
-			"name": "oberlordsword_39",
+			"name": "overlordsword_39",
 			"from": [1, 0, 14],
 			"to": [2, 1, 15],
 			"faces": {
@@ -1077,7 +1077,7 @@
 	},
 	"groups": [
 		{
-			"name": "oberlordsword",
+			"name": "overlordsword",
 			"isOpen": true,
 			"export": true,
 			"visibility": true,
