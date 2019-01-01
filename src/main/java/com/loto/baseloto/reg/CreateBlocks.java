@@ -1,5 +1,6 @@
 package com.loto.baseloto.reg;
 
+import com.loto.baseloto.block.BlockOverlordPortal;
 import com.loto.baseloto.block.BlockOverlordStone;
 
 import net.minecraft.block.Block;
@@ -18,6 +19,8 @@ public class CreateBlocks
 {
 	public static Block chrisMachine;
 	public static Block overlordStone;
+	public static Block overlordPortal;
+	
 	
 	public static Item chrisMachineItem;
 	public static Item overlordStoneItem;
@@ -26,12 +29,14 @@ public class CreateBlocks
     {
     	chrisMachine = new ChrisMachine().setUnlocalizedName("chrismachine").setRegistryName("chrismachine").setCreativeTab(DrewMod.tabDrew);
     	overlordStone = new BlockOverlordStone().setUnlocalizedName("overlordstone").setCreativeTab(DrewMod.tabLoto);
-		
+		overlordPortal = new BlockOverlordPortal().setUnlocalizedName("overlordportal").setRegistryName("overlordportal");
+    	
+    	
     	chrisMachineItem = new ItemBlock(chrisMachine).setRegistryName(chrisMachine.getRegistryName());
     	overlordStoneItem = new ItemBlock(overlordStone).setRegistryName(overlordStone.getRegistryName());
 
     	System.out.println("[LOTO] Registering Blocks...");
-    	ForgeRegistries.BLOCKS.registerAll(chrisMachine, overlordStone);
+    	ForgeRegistries.BLOCKS.registerAll(chrisMachine, overlordStone, overlordPortal);
     	ForgeRegistries.ITEMS.registerAll(chrisMachineItem, overlordStoneItem);
     	System.out.println("[LOTO] Registering Blocks... DONE");
 

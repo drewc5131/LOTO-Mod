@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "baseloto:overlordportal_ew"
+    },
+    "axis=x": {
+      "model": "baseloto:overlordportal_ns"
+    },
+    "inventory": {
+      "model": "baseloto:overlordportal_ns"
+    }
+  }
+}

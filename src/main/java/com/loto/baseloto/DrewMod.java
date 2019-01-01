@@ -13,6 +13,7 @@ import java.util.Iterator;
 import javax.annotation.Nullable;
 import javax.swing.JOptionPane;
 
+import com.loto.baseloto.dimension.DimensionOverlord;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -30,9 +31,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.world.DimensionType;
+import net.minecraft.world.WorldProvider;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -68,6 +72,8 @@ public class DrewMod {
 	public static final String MODID = "baseloto";
 	public static final String VERSION = "1.5.4";
 	public EventHandler eventHandler = new EventHandler(this);
+
+	public static DimensionType overlordRealmDimensionType; // Move this!!
 
 	public RPCClient rpcClient;
 	// TODO: Make server proxy
@@ -125,10 +131,15 @@ public class DrewMod {
 	public void preInit(FMLPreInitializationEvent event) {
 		proxy.createItems();
 		proxy.createBlocks();
+		proxy.createBiomes();
 		proxy.createMobs();
 		network = NetworkRegistry.INSTANCE.newSimpleChannel("LOTONetChannel");
 		network.registerMessage(CustomNamePacketHandler.class,
 				CustomNamePacket.class, 0, Side.CLIENT);
+
+		// MOVE THIS!
+		overlordRealmDimensionType = DimensionType.register("overlordRealm", "_overlordRealm", DimensionOverlord.DIMID, DimensionOverlord.OverlordWorldProvider.class, true);
+		DimensionManager.registerDimension(DimensionOverlord.DIMID, overlordRealmDimensionType);
 
 	}
 

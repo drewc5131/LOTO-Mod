@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 import com.loto.baseloto.DrewMod;
 import com.loto.baseloto.gui.GuiHandler;
+import com.loto.baseloto.reg.CreateBiomes;
 import com.loto.baseloto.reg.CreateBlocks;
 import com.loto.baseloto.reg.CreateItems;
 
@@ -31,6 +32,10 @@ public class CommonProxy
 	
 	public void createItems(){
 		CreateItems.register();
+	}
+	
+	public void createBiomes(){
+		CreateBiomes.register();
 	}
 	
 	public void createMobs()

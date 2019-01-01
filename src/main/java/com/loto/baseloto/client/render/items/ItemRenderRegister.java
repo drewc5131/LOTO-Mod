@@ -21,6 +21,7 @@ public class ItemRenderRegister
 	    reg(CreateItems.overlordSword, 0);
 	    reg(CreateItems.overlordAxe, 0);
 	    reg(CreateItems.mythicalPickaxe, 0);
+	    reg(CreateItems.overlordPortalAccessor, 0);
 	}
 
 	public static void reg(Item item, int meta)

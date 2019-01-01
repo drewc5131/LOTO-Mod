@@ -31,11 +31,12 @@ public class CreateItems
 	public static Item mythicalPickaxe = new ItemMythicalPickaxe(mythicalToolMaterial).setUnlocalizedName("mythicalpickaxe").setRegistryName("mythicalpickaxe").setCreativeTab(DrewMod.tabLoto);
 	public static Item netherShard = new NetherShard().setUnlocalizedName("nethershard").setRegistryName("nethershard").setCreativeTab(DrewMod.tabLoto);
 	public static Item despacitoDisk = (new DespacitoDisk("despacito", CreateSounds.despacito)).setUnlocalizedName("despacito").setRegistryName("despacitodisk").setCreativeTab(DrewMod.tabLoto);
-
+	public static Item overlordPortalAccessor = new ItemOverlordPortalAccessor().setUnlocalizedName("overlordportalaccessor").setRegistryName("overlordportalaccessor").setCreativeTab(DrewMod.tabLoto);
+	
 	public static ResourceLocation OVERLORD_MINION_DROPS = LootTableList.register(new ResourceLocation("baseloto", "entities/overlord_minion"));
 	
     public static void register(){
-    	ForgeRegistries.ITEMS.registerAll(chipmunkcard, Gtx970, KappaFish, overlordSword, overlordAxe, mythicalPickaxe, despacitoDisk);
+    	ForgeRegistries.ITEMS.registerAll(chipmunkcard, Gtx970, KappaFish, overlordSword, overlordAxe, mythicalPickaxe, despacitoDisk, overlordPortalAccessor);
     }
    
     

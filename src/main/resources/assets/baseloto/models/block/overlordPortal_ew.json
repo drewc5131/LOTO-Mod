@@ -1,7 +1,7 @@
 {
   "textures": {
-    "particle": "blocks/overlord_portal_interior",
-    "portal": "blocks/overlord_portal_interior"
+    "particle": "baseloto:blocks/overlordportalinterior",
+    "portal": "baseloto:blocks/overlordportalinterior"
   },
   "elements": [
     {

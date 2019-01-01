@@ -14,6 +14,7 @@ public class BlockRenderRegister
 	{
 		reg(CreateBlocks.chrisMachine);
 		reg(CreateBlocks.overlordStone);
+		reg(CreateBlocks.overlordPortal);
 	}
 
 	public static void reg(Block block)
