@@ -337,7 +337,7 @@ public class DimensionOverlord {
 							boolean flag = l1 < 0;
 							this.world.setBlockState(
 									new BlockPos(i2, j2, k2),
-									flag ? CreateBlocks.overlordStone
+									flag ? Blocks.RED_NETHER_BRICK
 											.getDefaultState() : Blocks.AIR
 											.getDefaultState());
 						}
@@ -643,7 +643,7 @@ public class DimensionOverlord {
 							boolean flag = k8 < 0;
 							this.world.setBlockState(
 									new BlockPos(k9, k10, k11),
-									flag ? CreateBlocks.overlordStone
+									flag ? Blocks.RED_NETHER_BRICK
 											.getDefaultState() : Blocks.AIR
 											.getDefaultState());
 						}
@@ -665,7 +665,7 @@ public class DimensionOverlord {
 								|| l9 == 3;
 						this.world.setBlockState(
 								new BlockPos(l10, l11, k12),
-								flag1 ? CreateBlocks.overlordStone
+								flag1 ? Blocks.RED_NETHER_BRICK
 										.getDefaultState() : iblockstate, 2);
 					}
 				}
