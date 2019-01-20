@@ -58,29 +58,29 @@ public class NametagRenderer {
 			float viewerYaw, float viewerPitch, double distance,
 			boolean renderThroughBlocks) {
 		double distanceFromPlayer = Math.max(Math.min(32, distance), 2);
-		GlStateManager.pushMatrix();
-		GlStateManager.translate(x, y, z);
-		GlStateManager.glNormal3f(0.0F, 1.0F, 0.0F);
-		GlStateManager.rotate(-viewerYaw, 0.0F, 1.0F, 0.0F);
-		GlStateManager.rotate(viewerPitch, 1.0F, 0.0F, 0.0F);
-		GlStateManager.scale(-0.025F * distanceFromPlayer * .45, -0.025F
-				* distanceFromPlayer * .45, 0.025F * distanceFromPlayer * .55);
-		GlStateManager.disableLighting();
-		GlStateManager.depthMask(false);
+		GL11.glPushMatrix();
+		GL11.glTranslated(x, y, z);
+		GL11.glNormal3f(0.0F, 1.0F, 0.0F);
+		GL11.glRotated(-viewerYaw, 0.0d, 1.0d, 0.0d);
+		GL11.glRotated(viewerPitch, 1.0d, 0.0d, 0.0d);
+		GL11.glScaled(-0.025d * distanceFromPlayer * .45, -0.025d
+				* distanceFromPlayer * .45, 0.025d * distanceFromPlayer * .55);
+		GL11.glDisable(GL11.GL_LIGHTING);
+		GL11.glDepthMask(false);
 
 		if (renderThroughBlocks) {
-			GlStateManager.disableDepth();
+			GL11.glDisable(GL11.GL_DEPTH);
 		}
 
-		GlStateManager.enableBlend();
+		GL11.glEnable(GL11.GL_BLEND);
 		GlStateManager
 				.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA,
 						GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA,
 						GlStateManager.SourceFactor.ONE,
 						GlStateManager.DestFactor.ZERO);
 		int i = this.renderManager.getFontRenderer().getStringWidth(name) / 2;
-		GlStateManager.disableTexture2D();
-
+		GL11.glDisable(GL11.GL_TEXTURE_2D);
+		
 		GL11.glEnable(GL11.GL_POLYGON_SMOOTH);
 		GL11.glHint(GL11.GL_POLYGON_SMOOTH_HINT, GL11.GL_NICEST);
 		GL11.glBegin(GL11.GL_QUADS);
@@ -93,20 +93,20 @@ public class NametagRenderer {
 		GL11.glEnd();
 		GL11.glDisable(GL11.GL_POLYGON_SMOOTH);
 
-		GlStateManager.enableTexture2D();
+		GL11.glEnable(GL11.GL_TEXTURE_2D);
 		this.renderManager.getFontRenderer().drawString(name,
 				-this.renderManager.getFontRenderer().getStringWidth(name) / 2,
 				0, -1, true);
 
 		if (renderThroughBlocks) {
-			GlStateManager.enableDepth();
+			GL11.glEnable(GL11.GL_DEPTH);
 		}
 
-		GlStateManager.depthMask(true);
-		GlStateManager.enableLighting();
-		GlStateManager.disableBlend();
-		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-		GlStateManager.popMatrix();
+		GL11.glDepthMask(true);
+		GL11.glEnable(GL11.GL_LIGHTING);
+		GL11.glDisable(GL11.GL_BLEND);
+		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+		GL11.glPopMatrix();
 	}
 
 }
