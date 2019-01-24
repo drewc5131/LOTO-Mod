@@ -1,6 +1,7 @@
 {
     "variants": {
-        "explode=true": { "model":"drewmod:chrisMachine" },
-        "explode=false": { "model":"drewmod:chrisMachine" }
+        "explode=true": { "model":"baseloto:chrismachine" },
+        "explode=false": { "model":"baseloto:chrismachine" },
+        "inventory": { "model":"baseloto:chrismachine" }
     }
 }
