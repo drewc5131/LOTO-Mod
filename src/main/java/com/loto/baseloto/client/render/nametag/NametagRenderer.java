@@ -49,7 +49,7 @@ public class NametagRenderer {
 
 			float entityHeight = entityIn.height + 0.5F;
 			drawNameplate(name, (float) x, (float) y + entityHeight, (float) z,
-					(float) yaw, (float) pitch, Math.sqrt(dist),
+					(float) yaw, this.renderManager.renderViewEntity.rotationPitch, Math.sqrt(dist),
 					renderThroughBlocks);
 		}
 	}

@@ -70,7 +70,7 @@ import com.loto.baseloto.reg.CreateSounds;
 @Mod(modid = DrewMod.MODID, version = DrewMod.VERSION)
 public class DrewMod {
 	public static final String MODID = "baseloto";
-	public static final String VERSION = "1.5.4";
+	public static final String VERSION = "1.5.5";
 	public EventHandler eventHandler = new EventHandler(this);
 
 	public static DimensionType overlordRealmDimensionType; // Move this!!
